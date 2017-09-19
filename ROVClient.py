@@ -13,14 +13,9 @@ def setupSocket():
 
 def sendReceive(s, message):
     s.send(message)
-    #s.send(str.encode(message))
-    reply = s.recv(1024)
-    #print("We have received a reply")
-    #print("Send closing message.")
+    reply = s.recv(16)
     s.send("EXIT")
-    #s.send(str.encode("EXIT"))
     s.close()
-    #reply = reply.decode('utf-8')
     return reply
 
 def transmit(message):
