@@ -14,8 +14,8 @@ def setupSocket():
 def sendReceive(s, message):
     s.send(message)
     reply = s.recv(16)
-    s.send("EXIT")
-    s.close()
+    #s.send("999 1")
+    #s.close()
     return reply
 
 def transmit(message):
